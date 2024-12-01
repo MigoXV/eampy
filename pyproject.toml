@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "eampy"
+version = "0.1.0"
+description = ""
+authors = ["MigoXV <1695587905@qq.com>"]
+readme = "README.md"
+packages = [{ include = "eampy" }]  # 指定包的目录是 'eampy'
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyserial = "^3.5"
+typer = "^0.14.0"
+chardet = "^5.2.0"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.10.0"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# 设置CLI命令入口
+[tool.poetry.scripts]
+eampy = "eampy.__main__:main"
